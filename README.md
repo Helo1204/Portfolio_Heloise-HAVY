@@ -6,6 +6,8 @@ Site portfolio statique, en français, sans dépendance ni compilation. Il s'ouv
 
 Les textes de démonstration sont à remplacer par ton parcours réel. Les pages concernées sont `index.html`, `etudes.html`, `projets.html`, `experiences.html`, `competences.html`, `engagement-associatif.html` et `engagements-solidaires.html`. Dans chaque page secondaire, adapte les boutons de catégorie et les panneaux correspondants. Le JavaScript dans `js/main.js` gère les onglets; il n'est pas nécessaire de le modifier pour changer leurs titres ou leur contenu.
 
+Le bandeau de navigation est partagé par toutes les pages et défini dans `js/main.js`. Le lien correspondant à la page courante est sélectionné automatiquement; il n'est donc plus nécessaire de copier ou modifier le bandeau dans chaque fichier HTML.
+
 ### Photo, logo et CV
 
 - Ajoute ton portrait en JPG à `assets/images/portrait.jpg`. Le cadre de la page d'accueil utilise ce chemin et garde un visuel de remplacement tant que la photo manque.

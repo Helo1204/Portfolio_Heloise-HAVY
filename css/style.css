@@ -149,10 +149,10 @@ a:focus-visible, button:focus-visible {
 .portrait-frame.image-loaded .portrait-placeholder { display: none; }
 .portrait-sticker { position: absolute; z-index: 3; top: 22px; left: -10px; display: grid; width: 64px; aspect-ratio: 1; place-content: center; transform: rotate(-9deg); border: 1px solid var(--ink); border-radius: 50%; background: var(--lime); color: var(--ink); font-size: 9px; font-weight: 700; line-height: 1.05; text-align: center; }
 .portrait-index { position: absolute; z-index: 3; right: 15px; bottom: 13px; color: white; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; }
-.school-signature { position: absolute; right: -27px; bottom: 2px; z-index: 4; display: flex; min-width: 225px; align-items: center; gap: 12px; padding: 12px 15px; border: 1px solid var(--ink); background: var(--surface); }
-.school-logo-placeholder { display: grid; width: 43px; height: 43px; flex: 0 0 auto; place-content: center; background: var(--lime); font-size: 8px; font-weight: 700; line-height: 1.05; text-align: center; }
+.school-signature { position: absolute; right: -27px; bottom: 2px; z-index: 4; display: flex; min-width: 225px; align-items: center; gap: 12px; padding: 1px 5px; border: 1px solid var(--ink); background: var(--surface); }
+.school-logo-placeholder { display: grid; width: 120px; height: 120px; flex: 0 0 auto; place-content: center; background: var(--lime); font-size: 8px; font-weight: 700; line-height: 1.05; text-align: center; }
 .school-logo-placeholder span { color: var(--teal); }
-.school-logo { display: none; width: 43px; height: 43px; object-fit: contain; }
+.school-logo { display: none; width: 120px; height: 120px; object-fit: contain; }
 .school-signature.image-loaded .school-logo { display: block; }
 .school-signature.image-loaded .school-logo-placeholder { display: none; }
 .school-signature p { display: grid; gap: 2px; margin: 0; line-height: 1.3; }
@@ -201,7 +201,13 @@ a:focus-visible, button:focus-visible {
 .entry-card-featured { background: var(--surface); }
 .entry-card-featured::before { position: absolute; top: -1px; bottom: -1px; left: -1px; width: 4px; background: var(--tomato); content: ""; }
 .entry-card-aside { background: var(--sky); }
-.entry-kicker { color: var(--teal); font-size: 9px; }
+.experience-company { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.experience-logo-placeholder { display: grid; width: 54px; height: 54px; flex: 0 0 54px; place-items: center; border: 1px solid var(--line); background: var(--sky); color: var(--teal); font-family: var(--display); font-size: 18px; }
+.experience-logo { display: none; width: 54px; height: 54px; object-fit: contain; }
+.experience-company.image-loaded .experience-logo { display: block; }
+.experience-company.image-loaded .experience-logo-placeholder { display: none; }
+.experience-company .entry-kicker { margin: 0; }
+.entry-kicker { color: var(--teal); font-size: 12px; }
 .entry-card h3 { max-width: 570px; margin: 15px 0 8px; font-family: var(--display); font-size: 29px; font-weight: 400; line-height: 1.13; }
 .entry-card p:not(.entry-kicker) { max-width: 650px; margin: 0; color: #4d5c55; font-size: 13px; line-height: 1.7; }
 .entry-meta { display: flex; flex-wrap: wrap; gap: 7px 22px; margin-top: 23px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }

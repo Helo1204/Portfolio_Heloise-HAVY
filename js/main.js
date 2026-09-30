@@ -1,5 +1,31 @@
 document.documentElement.classList.add("js-enabled");
 
+const sitePages = [
+  ["index.html", "Home"],
+  ["etudes.html", "Études"],
+  ["projets.html", "Projets"],
+  ["experiences.html", "Expériences"],
+  ["competences.html", "Compétences"],
+  ["engagement-associatif.html", "Engagement associatif"],
+  ["engagements-solidaires.html", "Engagements solidaires"],
+];
+
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+document.querySelectorAll("[data-site-header]").forEach((header) => {
+  header.innerHTML = `
+    <a class="brand" href="index.html" aria-label="Héloïse Havy, accueil">
+      <img class="brand-mark" src="assets/images/portrait.jpg" alt="" aria-hidden="true"></img>
+      <span class="brand-copy"><strong>Héloïse Havy</strong></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <ul>${sitePages.map(([href, label]) => `
+        <li><a href="${href}"${href === currentPage ? ' aria-current="page"' : ""}>${label}</a></li>
+      `).join("")}</ul>
+    </nav>
+  `;
+});
+
 document.querySelectorAll(".category-tabs").forEach((tabGroup) => {
   const tabs = Array.from(tabGroup.querySelectorAll('[role="tab"]'));
   const panels = Array.from(tabGroup.querySelectorAll('[role="tabpanel"]'));
